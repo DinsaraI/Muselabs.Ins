@@ -59,13 +59,13 @@
 
   <!-- Navbar fetch + JS -->
   <script>
-    fetch("assets/navbar.html")
+    fetch("/assets/navbar.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar-placeholder").innerHTML = data;
 
         const script = document.createElement("script");
-        script.src = "assets/navbar.js";
+        script.src = "/assets/navbar.js";
         document.body.appendChild(script);
       });
   </script>
