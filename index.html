@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MUSELABS | Home</title>
+
+  <!-- Navbar -->
+  <link rel="stylesheet" href="../assets/navbar.css" />
+
+  <!-- Homepage styles -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Carousel -->
+  <section class="carousel">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-slide active" style="background-image: url('images/tuition.jpg');">
+        <div class="carousel-text">
+          <h2>Music Tuition</h2>
+          <p>Learn music affordably with our expert tutors.</p>
+          <a href="../tuition/tuition.html" class="btn">Explore Tuition</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide" style="background-image: url('images/event-audio.jpg');">
+        <div class="carousel-text">
+          <h2>Event Audio</h2>
+          <p>Professional sound services for any event.</p>
+          <a href="../event-audio/event-audio.html" class="btn">Explore Event Audio</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide" style="background-image: url('images/event-management.jpg');">
+        <div class="carousel-text">
+          <h2>Event Management</h2>
+          <p>We organize unforgettable music events.</p>
+          <a href="../coming_soon/coming_soon.html" class="btn">Explore Event Management</a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+
+
+    </div>
+
+    <!-- Carousel controls -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </section>
+
+  <!-- Navbar fetch + JS -->
+  <script>
+    fetch("../assets/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "../assets/navbar.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <!-- Carousel JS -->
+  <script src="carousel.js" defer></script>
+
+  <!-- About Us Section -->
+<section class="about-us">
+  <div class="about-container">
+
+    <div class="about-text">
+      <h2>SERVING ALL YOUR MUSIC NEEDS</h2>
+      <p>
+        We are a group of passionate musicians who decided to make learning music, 
+        playing music, and organizing events more affordable and accessible. 
+        We understand the struggle — we’ve spent time, effort, and money trying 
+        to achieve the same, and we wanted to build a solution that works for everyone.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="images/about-us.jpg" alt="MuseLabs Team">
+    </div>
+
+  </div>
+</section>
+<!-- Footer placeholder -->
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("/assets/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+
+      // load footer CSS dynamically (optional)
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '/assets/footer.css';
+      document.head.appendChild(link);
+    });
+</script>
+
+
+</body>
+</html>
