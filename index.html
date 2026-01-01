@@ -97,7 +97,7 @@
 <div id="footer-placeholder"></div>
 
 <script>
-  fetch("assets/footer.html")
+  fetch("/assets/footer.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer-placeholder").innerHTML = data;
@@ -105,7 +105,7 @@
       // load footer CSS dynamically (optional)
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = 'assets/footer.css';
+      link.href = '/assets/footer.css';
       document.head.appendChild(link);
     });
 </script>
