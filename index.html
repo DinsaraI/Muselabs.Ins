@@ -59,7 +59,7 @@
 
   <!-- Navbar fetch + JS -->
   <script>
-    fetch("../assets/navbar.html")
+    fetch("assets/navbar.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar-placeholder").innerHTML = data;
@@ -97,7 +97,7 @@
 <div id="footer-placeholder"></div>
 
 <script>
-  fetch("/assets/footer.html")
+  fetch("assets/footer.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer-placeholder").innerHTML = data;
