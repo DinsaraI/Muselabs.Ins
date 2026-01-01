@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MUSELABS | Home</title>
 
-  <!-- Navbar -->
+   <!-- Navbar CSS -->
   <link rel="stylesheet" href="assets/navbar.css" />
+  <!-- Footer CSS -->
+  <link rel="stylesheet" href="assets/footer.css" />
 
   <!-- Homepage styles -->
   <link rel="stylesheet" href="index.css" />
@@ -97,18 +99,22 @@
 <div id="footer-placeholder"></div>
 
 <script>
-  fetch("assets/footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
+    fetch("assets/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+      const script = document.createElement("script");
+        script.src = "assets/navbar.js";
+        document.body.appendChild(script);
 
-      // load footer CSS dynamically (optional)
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'assets/footer.css';
-      document.head.appendChild(link);
-    });
-</script>
+
+    fetch("assets/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
 
 
 </body>
