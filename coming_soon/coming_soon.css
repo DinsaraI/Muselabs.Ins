@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url("images/hero-background.jpg") center/cover no-repeat;
+  color: #ffffff;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.divider {
+  width: 80px;
+  height: 2px;
+  background: #ffffff;
+  margin: 30px 0;
+  opacity: 0.6;
+}
+
+.launch {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+  .section {
+    padding: 60px 6%;
+  }
+
+  .hero-content h1,
+  .hero-box h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 50px 5%;
+  }
+
+  /* HERO */
+  .hero,
+  .contact-hero {
+    height: auto;
+    padding: 80px 5%;
+  }
+
+  .hero-content h1,
+  .hero-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p,
+  .hero-box p {
+    font-size: 1rem;
+  }
+
+  /* BUTTONS */
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* CARDS */
+  .card-grid,
+  .format-grid,
+  .contact-boxes,
+  .contact-options {
+    grid-template-columns: 1fr;
+  }
+
+  /* FORMS */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+}

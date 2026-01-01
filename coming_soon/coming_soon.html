@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MUSELABS | Coming Soon</title>
+
+  <!-- Coming soon styles -->
+  <link rel="stylesheet" href="coming_soon.css" />
+
+  <!-- Navbar styles -->
+  <link rel="stylesheet" href="../assets/navbar.css" />
+</head>
+<body>
+
+  <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Background overlay -->
+  <div class="overlay"></div>
+
+  <main class="container">
+    <img src="images/logo.png" alt="MUSELABS Logo" class="logo" />
+
+    <h1>Something powerful is coming</h1>
+    <p class="tagline">
+      Music Tuition • Sound • Events
+    </p>
+
+    <p class="description">
+      We’re building a space for affordable music education, professional sound,
+      and unforgettable events.  
+      Launching soon.
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="launch">
+      🚀 Going live soon. Stay tuned.
+    </p>
+
+    <footer>
+      <p>© 2026 MUSELABS</p>
+    </footer>
+  </main>
+
+  <!-- Navbar fetch -->
+  <script>
+    fetch("../assets/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+
+        // Load navbar JS AFTER navbar exists
+        const script = document.createElement("script");
+        script.src = "../assets/navbar.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+</body>
+</html>

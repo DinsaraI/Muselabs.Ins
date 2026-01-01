@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MUSELABS | Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="contact-us.css" />
+  <link rel="stylesheet" href="../assets/navbar.css" />
+  <link rel="stylesheet" href="../assets/footer.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar-placeholder"></div>
+
+<!-- HERO -->
+<section class="contact-hero">
+  <h1>Contact Us</h1>
+  <p>
+    Got a question, enquiry, or idea?  
+    Reach out — we’ll get back to you as soon as possible.
+  </p>
+</section>
+
+<!-- QUICK CONTACT -->
+<section class="section">
+  <h2>Get in Touch Quickly</h2>
+
+  <div class="contact-boxes">
+    <a href="https://wa.me/94706230255" target="_blank" class="contact-box whatsapp">
+      📱
+      <strong>WhatsApp</strong>
+      <span>+94 70 623 0255</span>
+    </a>
+
+    <a href="mailto:muselabs.ins@gmail.com" class="contact-box email">
+      📧
+      <strong>Email</strong>
+      <span>muselabs.ins@gmail.com</span>
+    </a>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section light">
+  <h2>Send Us a Message</h2>
+  <p class="center-text">
+    Fill out the form below and we’ll get back to you shortly.
+  </p>
+
+  <div class="form-wrapper">
+    <!-- REPLACE WITH YOUR GOOGLE FORM EMBED LINK -->
+    <iframe 
+      src="PASTE_YOUR_GOOGLE_FORM_EMBED_LINK_HERE"
+      width="100%"
+      height="650"
+      frameborder="0"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("../assets/navbar.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+
+  fetch("../assets/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+</script>
+
+</body>
+</html>

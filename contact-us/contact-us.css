@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+/* HERO */
+.contact-hero {
+  padding: 100px 10%;
+  text-align: center;
+  background: #f6f6f6;
+}
+
+.contact-hero h1 {
+  margin-bottom: 15px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 10%;
+}
+
+.section.light {
+  background: #fafafa;
+}
+
+.center-text {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* CONTACT BOXES */
+.contact-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  max-width: 700px;
+  margin: 40px auto 0;
+}
+
+.contact-box {
+  padding: 35px;
+  text-align: center;
+  text-decoration: none;
+  color: #111;
+  border: 1px solid #ddd;
+  background: #fff;
+  transition: 0.2s ease;
+}
+
+.contact-box:hover {
+  background: #f5f5f5;
+}
+
+.contact-box span {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+.contact-box.whatsapp {
+  border-color: #25d366;
+}
+
+.contact-box.email {
+  border-color: #000;
+}
+
+/* FORM */
+.form-wrapper {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+  .section {
+    padding: 60px 6%;
+  }
+
+  .hero-content h1,
+  .hero-box h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 50px 5%;
+  }
+
+  /* HERO */
+  .hero,
+  .contact-hero {
+    height: auto;
+    padding: 80px 5%;
+  }
+
+  .hero-content h1,
+  .hero-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p,
+  .hero-box p {
+    font-size: 1rem;
+  }
+
+  /* BUTTONS */
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* CARDS */
+  .card-grid,
+  .format-grid,
+  .contact-boxes,
+  .contact-options {
+    grid-template-columns: 1fr;
+  }
+
+  /* FORMS */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+}

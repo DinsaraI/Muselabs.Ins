@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MUSELABS | Event Audio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="event-audio.css">
+  <link rel="stylesheet" href="../assets/navbar.css">
+  <link rel="stylesheet" href="../assets/footer.css">
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<!-- HERO -->
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Professional Event Audio</h1>
+    <p>
+      Clean sound. Reliable setup. Handled by musicians who understand live performance.
+    </p>
+    <a href="#contact" class="btn-primary">Get in Touch</a>
+  </div>
+</section>
+
+
+<!-- WHY US -->
+<section class="section">
+  <h2>Why Choose MUSLABS?</h2>
+
+  <div class="reasons">
+    <div class="reason">🎚️ Musicians handling your mix — not guesswork</div>
+    <div class="reason">🔊 Clean sound with proper gain structure</div>
+    <div class="reason">⏱️ On-time setup & disciplined workflow</div>
+    <div class="reason">🤝 Clear communication before & during events</div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="section light">
+  <h2>Events We Cover</h2>
+  <ul class="event-list">
+    <li>Live Band Performances</li>
+    <li>DJ Events</li>
+    <li>Corporate & Private Events</li>
+    <li>Small Concerts & Showcases</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p class="center-text">
+    Fill in the details below. You’ll be instantly connected to us via WhatsApp and Email.
+  </p>
+
+  <form class="contact-form" onsubmit="sendContact(event)">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="phone" placeholder="Your Phone Number" required>
+    <input type="text" id="eventType" placeholder="Event Type">
+    <input type="date" id="eventDate">
+    <input type="text" id="location" placeholder="Event Location">
+    <textarea id="message" placeholder="Event details"></textarea>
+
+    <button type="submit">Send Enquiry</button>
+  </form>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("../assets/navbar.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+     const script = document.createElement("script");
+        script.src = "../assets/navbar.js";
+        document.body.appendChild(script);
+
+  fetch("../assets/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+
+  function sendContact(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const eventType = document.getElementById("eventType").value;
+    const eventDate = document.getElementById("eventDate").value;
+    const location = document.getElementById("location").value;
+    const message = document.getElementById("message").value;
+
+    const text =
+      `Event Audio Enquiry%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Event Type: ${eventType}%0A
+Date: ${eventDate}%0A
+Location: ${location}%0A
+Details: ${message}`;
+
+    // WhatsApp
+    window.open(`https://wa.me/94706230255?text=${text}`, "_blank");
+
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MUSELABS | Tuition</title>
+
+  <link rel="stylesheet" href="tuition.css" />
+
+  <!-- Navbar CSS -->
+  <link rel="stylesheet" href="../assets/navbar.css" />
+  <!-- Footer CSS -->
+  <link rel="stylesheet" href="../assets/footer.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Music Tuition That Actually Makes Sense</h1>
+      <p>
+        Affordable, practical lessons taught by working musicians.
+        No pressure. No nonsense.
+      </p>
+      <a href="#apply" class="btn-primary">Apply for Tuition</a>
+    </div>
+  </section>
+
+  <!-- WHAT WE TEACH -->
+  <section class="section">
+    <h2>What We Teach</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>🥁 Drums</h3>
+        <p>Groove, technique, timing, and musicality.</p>
+        <span>Beginner – Advanced</span>
+      </div>
+
+      <div class="card">
+        <h3>🎸 Guitar</h3>
+        <p>Chords, lead, rhythm, and real songs.</p>
+        <span>Beginner – Intermediate</span>
+      </div>
+
+      <div class="card">
+        <h3>🎹 Keys / Piano</h3>
+        <p>Foundations, harmony, and playing by ear.</p>
+        <span>Beginner – Intermediate</span>
+      </div>
+
+      <div class="card">
+        <h3>🎤 Vocals</h3>
+        <p>Pitch, control, confidence, and tone.</p>
+        <span>Beginner – Intermediate</span>
+      </div>
+
+      <div class="card">
+        <h3>🎶 Music Theory</h3>
+        <p>Understand music without overcomplicating it.</p>
+        <span>All Levels</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / DIFFERENCE -->
+  <section class="section light">
+    <h2>Why MUSLABS?</h2>
+    <p class="center-text">
+      We’re musicians who struggled through expensive lessons, unclear guidance,
+      and wasted money. MUSLABS exists to make learning music
+      <strong>affordable, practical, and human</strong>.
+    </p>
+
+    <ul class="points">
+      <li>No unnecessary long-term commitments</li>
+      <li>Real-world musicians as tutors</li>
+      <li>Focused on progress, not exams</li>
+    </ul>
+  </section>
+
+  <!-- CLASS FORMATS -->
+  <section class="section">
+    <h2>Class Formats</h2>
+
+    <div class="format-grid">
+      <div class="format-card">
+        <h3>Online Classes</h3>
+        <p>Flexible scheduling, learn from anywhere, lower cost.</p>
+      </div>
+
+      <div class="format-card">
+        <h3>Physical Classes</h3>
+        <p>Hands-on guidance in a studio environment. Limited slots.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section class="section light" id="apply">
+    <h2>Apply for Tuition</h2>
+    <p class="center-text">
+      Fill out the form below and we’ll contact you via WhatsApp
+      to understand your goals and availability.
+    </p>
+
+    <!-- GOOGLE FORM PLACEHOLDER -->
+    <div class="form-placeholder">
+      <!-- Replace the src with your Google Form embed link -->
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSd2gO16_lid3SRjmOAjTV1FZNm8LCtfHuT1-eknYS05A8ZlKQ/viewform?usp=dialog"
+        width="100%" 
+        height="600" 
+        frameborder="0"
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load navbar & footer -->
+  <script>
+    fetch("../assets/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+      const script = document.createElement("script");
+        script.src = "../assets/navbar.js";
+        document.body.appendChild(script);
+
+
+    fetch("../assets/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
